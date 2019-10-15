@@ -8,7 +8,7 @@ var response;
 
 app.get('/', function (req, res) {
   response = 'Value in APP_MSG env var is'+ msg + '\n';
-  fs.readFile('opt/app-root/secure/myapp.sec', 'utf8', function(secerr, secdata){
+  fs.readFile('/opt/app-root/secure/myapp.sec', 'utf8', function(secerr, secdata){
 	 if (secerr){
   		 console.log(secerr+ '\n');
   		 response += secerr+ '\n';
